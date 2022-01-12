@@ -12,7 +12,7 @@ This repository contains:
 
 - **Libraries** (`/local/lib` directory), which include application-specific Python classes and methods.
 
-- **Recipe Script** files (`/local/recipes` directory), which include Python scripts intended to be executed in the Aqueduct platform. 
+- **Recipe Script** files (`/local/recipes` directory), which include Python scripts intended to be executed using the Aqueduct platform. 
 These Python scripts depend on the Library of the same name (for example, scripts in the `/local/recipes/ph_control`
 path require the `/local/lib/ph_control` Library)
 
@@ -57,7 +57,7 @@ that can be uploaded to an Aqueduct Hub and used to load a `.recipe`, `.setup`, 
 In summary:
 
 A Recipe (`.recipe` file), contains a Recipe Script, Setup, and (maybe) a Layout. When a Recipe 
-is run in the Aqueduct platform, it executes the code found in the Recipe Script. A Recipe Script 
+is run using the Aqueduct platform, it executes the code found in the Recipe Script. A Recipe Script 
 may import classes, methods, or definitions from one or more local Libraries.
 
 # Usage #
