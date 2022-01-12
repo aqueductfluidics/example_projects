@@ -1,0 +1,3 @@
+IS_PROD = False
+IS_DEV = True
+LAB_MODE_ENABLED = False
