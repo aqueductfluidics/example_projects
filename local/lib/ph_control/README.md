@@ -117,3 +117,6 @@ The PID Control algorithm adds base continuously to the reaction
 vessel to achieve the target pH setpoint. The rate of addition is calculated 
 by the PID controller, which constantly calculates the error (setpoint - current value of pH), 
 cumulative error (sum of errors), and time rate of change of the error (d_error/dt). 
+
+Demo here: [![PID Control](https://img.youtube.com/vi/Di3eZi9dHww/0.jpg)](https://www.youtube.com/watch?v=Di3eZi9dHww)
+
