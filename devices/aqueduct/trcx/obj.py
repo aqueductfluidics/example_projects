@@ -231,7 +231,9 @@ class TRCX(devices.base.obj.Device):
             pump9: Union[PumpCommand, dict, None] = None,
             pump10: Union[PumpCommand, dict, None] = None,
             pump11: Union[PumpCommand, dict, None] = None,
-            update_interval_s: int = 1
+            wait_for_complete: bool = True,
+            update_interval_s: int = 0.5,
+            record: bool = True,
     ):
         """Command to start one or more pump inputs in either finite or continuous mode.
 
@@ -347,10 +349,20 @@ class TRCX(devices.base.obj.Device):
             | PumpCommand, dict, or None to control actions for pump input 11
             | Defaults to None
         :type pump11: PumpCommand, dict, None, required
+        :param wait_for_complete:
+            | Determines blocking behavior of command, if set to `True`, requires
+            | any finite operations to complete before proceeding, if set to a tuple of
+            | bools, requires only inputs flagged to complete
+            | Defaults to True
+        :type wait_for_complete: bool, tuple of bools
         :param update_interval_s:
             | interval to update, should be greater than 0.5
             | Defaults to 1
         :type update_interval_s: PumpCommand, dict, None, required
+        :param record:
+            | record the operational data of the pump
+            | Defaults to False
+        :type record: bool
 
         :return: tx_params
         :rtype: dict

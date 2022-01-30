@@ -37,6 +37,7 @@ class PP(devices.base.obj.Device):
             rate_units: str = "rpm",
             finite_value: float = None,
             finite_units: str = None,
+            record: bool = False,
             wait_for_complete: bool = True
     ) -> dict:
         """Start the pump. The pump can be run indefinitely in `continuous` mode or for a finite
@@ -74,6 +75,8 @@ class PP(devices.base.obj.Device):
         :param finite_units: `str` to set the *finite_units* in finite-mode operation, should be one of `"steps"` ,
             `"s"` , `"min"` , `"degrees"` , `"ml"`
         :type finite_units: {`"steps"` , `"s"` , `"min"` , `"degrees"` , `"ml"`}
+        :param record: record the data from the pump
+        :type record: bool
         :param wait_for_complete: flag to control whether a recipe waits for the pump to complete,
             a finite-mode operation before continuing to the next step.
             Defaults to `True`

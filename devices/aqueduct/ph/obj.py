@@ -37,7 +37,7 @@ class PH(devices.base.obj.Device):
         :param interval_s: number-like value to specify the update interval in seconds
             between the Hub and the OHSA Device Node
         :type interval_s: float, int, defaults to 1.
-        :param record: record the data from each balance
+        :param record: record the data from each pH electrode
         :type record: bool
 
         :return: command dictionary
@@ -143,7 +143,7 @@ class PH(devices.base.obj.Device):
 
     def set_sim_noise(self, value: Union[int, float]) -> None:
         """
-        In `Sim` mode, simulated noise is added to the balance weight readings by default.
+        In `Sim` mode, simulated noise is added to the pH readings by default.
 
         Turn off the simulated noise by passing ``value = 0``
 

@@ -32,7 +32,7 @@ class PH3(devices.base.obj.Device):
         :param interval_s: number-like value to specify the update interval in seconds
             between the Hub and the PH3 Device Node
         :type interval_s: float, int, defaults to 1.
-        :param record: record the data from each balance
+        :param record: record the data from each pH electrode
         :type record: bool
 
         :return: command dictionary
@@ -164,7 +164,7 @@ class PH3(devices.base.obj.Device):
 
     def set_sim_value(self, value: float, index: int = 0):
         """
-        In `Sim` mode, sets the simulated pH reading for a given balance input.
+        In `Sim` mode, sets the simulated pH reading for a given electrode input.
 
         Useful for checking logic based on feedback from a pH probe.
 
@@ -248,7 +248,7 @@ class PH3(devices.base.obj.Device):
 
     def set_sim_noise(self, active: int = 1, values: Union[dict, tuple, list] = ()) -> None:
         """
-        In `Sim` mode, simulated noise is added to the balance weight readings by default.
+        In `Sim` mode, simulated noise is added to the pH readings by default.
 
         Turn off the simulated noise by passing ``active = 0``
 
